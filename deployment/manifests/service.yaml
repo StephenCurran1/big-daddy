@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: big-daddy
+  namespace: big-daddy
+  labels:
+     app: big-daddy
+     env: staging
+spec:
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+  selector:
+     app: big-daddy
+     env: staging
+     microservice: big-daddy

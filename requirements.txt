@@ -1,0 +1,6 @@
+Flask
+setuptools
+requests
+python-rapidjson
+datadog
+structlog

@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  event_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+    command: ["python3", "run_flask.py"]
+    ports:
+      - "5000:5000"
+    expose: [5000]
